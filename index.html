@@ -174,17 +174,17 @@
                         <div class="w-12 h-12 rounded-full bg-sage-100 flex items-center justify-center text-sage-600 mb-6">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21l-8-4.5v-9L12 3l8 4.5v9L12 21z"></path></svg>
                         </div>
-                        <span class="text-xs uppercase tracking-widest text-sage-600 font-semibold">Ceremony</span>
+                        <span class="text-xs uppercase tracking-widest text-sage-600 font-semibold">Ceremony &amp; Celebration</span>
                         <h3 class="font-serif text-3xl text-sage-900 mt-1 mb-4">3:00 PM at Cheakamus Outdoor Centre</h3>
                         <p class="text-sage-700 text-sm md:text-base mb-6 leading-relaxed">
-                            Join us for our outdoor ceremony surrounded by the majestic trees and natural beauty of the Cheakamus Outdoor Centre in Squamish. Please arrive 15 minutes early.
+                            Join us for our outdoor ceremony surrounded by the majestic trees and natural beauty of the Cheakamus Outdoor Centre in Squamish. <strong>Please arrive 30 minutes early (2:30 PM).</strong> Following the ceremony from 3:30 PM to 4:30 PM, there will be activities and opportunities for photos.
                         </p>
                         <ul class="space-y-3 text-sm text-sage-800 border-t border-sage-100 pt-6">
                             <li class="flex items-center">
                                 <strong class="w-24 text-sage-600 font-medium">Date:</strong> August 13th, 2027
                             </li>
                             <li class="flex items-center">
-                                <strong class="w-24 text-sage-600 font-medium">Time:</strong> 3:00 PM
+                                <strong class="w-24 text-sage-600 font-medium">Time:</strong> 3:00 PM (Arrival at 2:30 PM)
                             </li>
                             <li class="flex items-start">
                                 <strong class="w-24 text-sage-600 shrink-0 font-medium">Address:</strong> 
@@ -209,14 +209,14 @@
                         <span class="text-xs uppercase tracking-widest text-sage-600 font-semibold">Reception &amp; Dinner</span>
                         <h3 class="font-serif text-3xl text-sage-900 mt-1 mb-4">6:00 PM Dinner at Howe Sound Brewery</h3>
                         <p class="text-sage-700 text-sm md:text-base mb-6 leading-relaxed">
-                            Following the ceremony, join us at Howe Sound Brewery on August 13th, 2027 for dinner, craft drinks, and an evening of celebration in Squamish.
+                            Brewery doors will open at 5:00 PM. Following that, join us for dinner at 6:00 PM on August 13th, 2027 for craft drinks and an evening of celebration in Squamish.
                         </p>
                         <ul class="space-y-3 text-sm text-sage-800 border-t border-sage-100 pt-6">
                             <li class="flex items-center">
                                 <strong class="w-24 text-sage-600 font-medium">Date:</strong> August 13th, 2027
                             </li>
                             <li class="flex items-center">
-                                <strong class="w-24 text-sage-600 font-medium">Time:</strong> 6:00 PM for dinner
+                                <strong class="w-24 text-sage-600 font-medium">Time:</strong> Doors at 5:00 PM | Dinner at 6:00 PM
                             </li>
                             <li class="flex items-start">
                                 <strong class="w-24 text-sage-600 shrink-0 font-medium">Address:</strong> 
@@ -301,6 +301,20 @@
                         <div>
                             <label for="phone" class="block text-xs uppercase tracking-widest text-sage-700 font-semibold mb-2">Phone Number *</label>
                             <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567" class="w-full px-4 py-3 rounded-xl border border-sage-200 focus:outline-none focus:border-sage-400 text-sage-800 placeholder-sage-300 bg-cream-50/50 transition-colors">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-sage-700 font-semibold mb-3">Number of Guests Attending *</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <label class="flex items-center justify-center px-4 py-3.5 border border-sage-200 rounded-xl cursor-pointer hover:bg-sage-50/40 transition-all has-[:checked]:bg-sage-400 has-[:checked]:text-white has-[:checked]:border-sage-400 text-center">
+                                <input type="radio" name="guest_count" value="1" checked required class="sr-only peer">
+                                <span class="text-sm font-medium tracking-wide">1 Person</span>
+                            </label>
+                            <label class="flex items-center justify-center px-4 py-3.5 border border-sage-200 rounded-xl cursor-pointer hover:bg-sage-50/40 transition-all has-[:checked]:bg-sage-400 has-[:checked]:text-white has-[:checked]:border-sage-400 text-center">
+                                <input type="radio" name="guest_count" value="2" required class="sr-only peer">
+                                <span class="text-sm font-medium tracking-wide">2 People</span>
+                            </label>
                         </div>
                     </div>
 
@@ -401,9 +415,10 @@
             e.preventDefault();
             const fullName = document.getElementById('fullName').value;
             const attendance = document.querySelector('input[name="attendance"]:checked').value;
+            const guestCount = document.querySelector('input[name="guest_count"]:checked').value;
 
-            // Dynamically set the email subject line to "Wedding - [Full Name]"
-            document.getElementById('email-subject').value = `Wedding - ${fullName}`;
+            // Dynamically set the email subject line to "Wedding - [Full Name] ([X] Guests)"
+            document.getElementById('email-subject').value = `Wedding - ${fullName} (${guestCount} Guest${guestCount > 1 ? 's' : ''})`;
 
             const formData = new FormData(rsvpForm);
 
@@ -416,7 +431,7 @@
 
                 if (data.success) {
                     if (attendance.includes('attend')) {
-                        successText.innerHTML = `Thank you, <strong class="text-sage-900">${fullName}</strong>! Your RSVP has been joyfully recorded. We look forward to seeing you on August 13th, 2027.`;
+                        successText.innerHTML = `Thank you, <strong class="text-sage-900">${fullName}</strong>! Your RSVP for <strong class="text-sage-900">${guestCount} guest${guestCount > 1 ? 's' : ''}</strong> has been joyfully recorded. We look forward to seeing you on August 13th, 2027.`;
                     } else {
                         successText.innerHTML = `Thank you, <strong class="text-sage-900">${fullName}</strong>. We are sorry you won't be able to make it, but you will be in our thoughts!`;
                     }
