@@ -84,3 +84,115 @@
             <a href="#rsvp" class="mobile-link px-5 py-3 bg-sage-400 text-white rounded-full hover:bg-sage-500 transition-all inline-block mt-2">RSVP</a>
         </div>
     </nav>
+
+    <header id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 overflow-hidden bg-cover bg-center" style="background-image: url('pic 2.jfif');">
+        <!-- Transparent color overlay to ensure text readability -->
+        <div class="absolute inset-0 bg-cream-50/75 backdrop-blur-[2px]"></div>
+
+        <div class="absolute -top-12 -left-12 w-80 h-80 rounded-full bg-sage-200/20 blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 -right-12 w-80 h-80 rounded-full bg-sage-300/15 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10 py-12">
+            <div class="flex justify-center items-center gap-3 mb-4 text-sage-500">
+                <svg class="w-5 h-5 text-sage-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M17 5l-5 3-5-3"></path>
+                </svg>
+                <span class="inline-block uppercase tracking-[0.3em] text-xs md:text-sm text-sage-600 font-medium">Save the Date</span>
+                <svg class="w-5 h-5 text-sage-400 transform scale-x-[-1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M17 5l-5 3-5-3"></path>
+                </svg>
+            </div>
+            
+            <h1 class="font-serif text-5xl sm:text-7xl md:text-8xl text-sage-900 tracking-tight font-normal mb-6 leading-none">
+                Meagan <span class="italic font-light text-sage-400">&amp;</span> Keith
+            </h1>
+            <p class="font-serif italic text-xl md:text-2xl text-sage-700 mb-10">
+                August 13th, 2027 &bull; Squamish, British Columbia
+            </p>
+
+            <div class="bg-white/85 backdrop-blur-sm border border-sage-200/80 rounded-3xl p-6 md:p-8 max-w-xl mx-auto shadow-sm mb-10">
+                <p class="text-[11px] uppercase tracking-widest text-sage-600 mb-4 font-semibold">Countdown to Forever</p>
+                <div id="countdown" class="grid grid-cols-4 gap-4 text-center">
+                    <div class="flex flex-col">
+                        <span id="days" class="font-serif text-3xl md:text-4xl font-semibold text-sage-900">00</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-widest text-sage-500 mt-1">Days</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="hours" class="font-serif text-3xl md:text-4xl font-semibold text-sage-900">00</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-widest text-sage-500 mt-1">Hours</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="minutes" class="font-serif text-3xl md:text-4xl font-semibold text-sage-900">00</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-widest text-sage-500 mt-1">Minutes</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="seconds" class="font-serif text-3xl md:text-4xl font-semibold text-sage-900">00</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-widest text-sage-500 mt-1">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Photo Added Here -->
+            <div class="max-w-md mx-auto mb-10 p-3 bg-white/90 backdrop-blur-md rounded-3xl border border-sage-200/80 shadow-md">
+                <div class="overflow-hidden rounded-2xl aspect-[4/5] bg-sage-100">
+                    <img src="pic 3.jfif" alt="Meagan and Keith" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#rsvp" class="w-full sm:w-auto px-8 py-4 bg-sage-400 text-white uppercase tracking-widest text-xs font-medium rounded-full hover:bg-sage-500 transition-all shadow-md">
+                    RSVP Now
+                </a>
+                <a href="#details" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-sage-400 text-sage-800 uppercase tracking-widest text-xs font-medium rounded-full hover:bg-sage-50 transition-all">
+                    Wedding Details
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="details" class="py-24 px-6 bg-sage-50/40 border-y border-sage-200/60 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="flex justify-center items-center gap-2 text-sage-400 mb-2">
+                    <svg class="w-4 h-4 text-sage-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <span class="text-xs uppercase tracking-[0.3em] text-sage-600 font-semibold">When &amp; Where</span>
+                    <svg class="w-4 h-4 text-sage-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl text-sage-900 font-normal">Our Day &amp; Schedule</h2>
+                <div class="flex items-center justify-center gap-3 mt-4">
+                    <div class="w-12 h-0.5 bg-sage-300"></div>
+                    <!-- Minimal Fern Leaf Divider SVG -->
+                    <svg class="w-5 h-5 text-sage-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 7l-5 3-5-3M16 12l-4 3-4-3"/></svg>
+                    <div class="w-12 h-0.5 bg-sage-300"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Ceremony Card -->
+                <div class="bg-white rounded-3xl p-8 md:p-10 border border-sage-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-sage-100 flex items-center justify-center text-sage-600 mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21l-8-4.5v-9L12 3l8 4.5v9L12 21z"></path></svg>
+                        </div>
+                        <span class="text-xs uppercase tracking-widest text-sage-600 font-semibold">Ceremony &amp; Celebration</span>
+                        <h3 class="font-serif text-3xl text-sage-900 mt-1 mb-4">3:00 PM at Cheakamus Outdoor Centre</h3>
+                        <p class="text-sage-700 text-sm md:text-base mb-6 leading-relaxed">
+                            Join us for our outdoor ceremony, surrounded by the majestic trees and natural beauty of the Cheakamus Outdoor Centre in Squamish. Please arrive at least 30 minutes early. Following the ceremony, there will be activities and opportunities for photos from 3:30-4:30.
+                        </p>
+                        <ul class="space-y-3 text-sm text-sage-800 border-t border-sage-100 pt-6">
+                            <li class="flex items-center">
+                                <strong class="w-24 text-sage-600 font-medium">Date:</strong> August 13th, 2027
+                            </li>
+                            <li class="flex items-center">
+                                <strong class="w-24 text-sage-600 font-medium">Time:</strong> 3:00 PM (Arrival at 2:30 PM)
+                            </li>
+                            <li class="flex items-start">
+                                <strong class="w-24 text-sage-600 shrink-0 font-medium">Address:</strong> 
+                                <span>2170 Paradise Valley Rd, Squamish, BC</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-sage-100">
+                        <a href="https://maps.google.com/?q=Cheakamus+Centre+Squamish" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs uppercase tracking-widest text-sage-600 hover:text-sage-800 font-semibold">
+                            <span>View on Google Maps</span>
+                            <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="
